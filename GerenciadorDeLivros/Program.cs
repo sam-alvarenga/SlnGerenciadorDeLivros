@@ -3,23 +3,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace GerenciadorDeLivros
-{
+using System;
+using System.Collections.Generic;
+
+using GerenciadorLivros.models;
+
+
     class Program
     {
-        class Livro
-        {
-            public string Nome { get; set; }
-            public string Autor { get; set; }
-            public int QuantidadePaginas { get; set; }
-            public bool Leu { get; set; }
-
-            public override string ToString()
-            {
-                return $"Nome: {Nome}, Autor: {Autor}, Páginas: {QuantidadePaginas}, Leu: {(Leu ? "Sim" : "Não")}";
-            }
-        }
-
         static void Main(string[] args)
         {
             List<Livro> livros = new List<Livro>();
@@ -52,7 +43,6 @@ namespace GerenciadorDeLivros
                 }
             }
         }
-
 
         static void CadastrarLivro(List<Livro> livros)
         {
@@ -101,4 +91,5 @@ namespace GerenciadorDeLivros
             Console.ReadKey();
         }
     }
-}
+
+
